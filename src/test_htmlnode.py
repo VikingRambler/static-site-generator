@@ -1,6 +1,7 @@
 import unittest
 
 from htmlnode import HTMLNode, LeafNode, ParentNode
+from inline_markdown import split_nodes_delimiter
 from textnode import TextNode, text_node_to_html_node, TextType
 
 class TestHTMLNode(unittest.TestCase):
@@ -70,6 +71,8 @@ class TestHTMLNode(unittest.TestCase):
         parent_node = ParentNode(None, [child_node])
         self.assertRaises(ValueError)
 
+    # TextNode to HTMLNode tests
+
     def test_text(self):
         node = TextNode("This is a text node", TextType.TEXT)
         html_node = text_node_to_html_node(node)
@@ -111,7 +114,7 @@ class TestHTMLNode(unittest.TestCase):
         node = TextNode("This is an invalid node", "Nonsense")
         with self.assertRaises(Exception) as context:
             text_node_to_html_node(node)
-        self.assertEqual(str(context.exception), "Unknown text type")
+        self.assertEqual(str(context.exception), "Unknown text type: {text_node.text_type}")
 
 if __name__ == '__main__':
      unittest.main()
