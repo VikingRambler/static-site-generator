@@ -1,6 +1,6 @@
 import unittest
 
-from inline_markdown import split_nodes_delimiter, extract_markdown_images, extract_markdown_links
+from inline_markdown import split_nodes_delimiter, extract_markdown_images, extract_markdown_links, split_nodes_image, split_nodes_link
 from textnode import TextNode, TextType
 
 class TestInlineMarkdown(unittest.TestCase):
@@ -109,6 +109,38 @@ class TestInlineMarkdown(unittest.TestCase):
             "This is text with a link to [DCCyber](https://dccyber.co.uk) and a link to [python.dccyber](https://python.dccyber.co.uk)"
         )
         self.assertListEqual([("DCCyber", "https://dccyber.co.uk"), ("python.dccyber", "https://python.dccyber.co.uk")], matches)
+
+    def test_split_images(self):
+        node = TextNode(
+        "This is text with an ![image](https://i.imgur.com/zjjcJKZ.png) and another ![second image](https://i.imgur.com/3elNhQu.png)",
+        TextType.TEXT,
+    )
+        new_nodes = split_nodes_image([node])
+        self.assertListEqual(
+        [
+            TextNode("This is text with an ", TextType.TEXT),
+            TextNode("image", TextType.IMAGE, "https://i.imgur.com/zjjcJKZ.png"),
+            TextNode(" and another ", TextType.TEXT),
+            TextNode("second image", TextType.IMAGE, "https://i.imgur.com/3elNhQu.png"),
+        ],
+        new_nodes,
+    )
+
+    def test_split_links(self):
+        node = TextNode(
+        "This is text with a link to [DCCYBER](https://dccyber.co.uk) and another to [PYTHON.DCCYBER](https://python.dccyber.co.uk)",
+        TextType.TEXT,
+    )
+        new_nodes = split_nodes_link([node])
+        self.assertListEqual(
+        [
+            TextNode("This is text with a link to ", TextType.TEXT),
+            TextNode("DCCYBER", TextType.LINK, "https://dccyber.co.uk"),
+            TextNode(" and another to ", TextType.TEXT),
+            TextNode("PYTHON.DCCYBER", TextType.LINK, "https://python.dccyber.co.uk"),
+        ],
+        new_nodes,
+    )
 
 if __name__ == '__main__':
      unittest.main()
