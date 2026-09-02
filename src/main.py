@@ -8,6 +8,6 @@ def main():
     parser = argparse.ArgumentParser(description="Static Site Generator")
     parser.add_argument("basepath", type = str, help="Specify BasePath", default = "/")
     args = parser.parse_args()
-    populate_site(SRC, DEST)
+    populate_site(SRC, "./docs")
     generate_page_recursive(args.basepath, "./content/", "template.html", "./docs/")
 main()
