@@ -16,18 +16,18 @@ def extract_title(markdown: str):
     else:
         raise Exception("File does not exist")
 
-def generate_page_recursive(from_path, template_path, dest_path):
+def generate_page_recursive(basepath, from_path, template_path, dest_path):
     folder_contents = os.listdir(from_path)
     for item in folder_contents:
         if (
             os.path.isfile(os.path.join(from_path, item))
             and item.endswith(".md")
         ):
-            generate_page(os.path.join(from_path, item), template_path, dest_path)
+            generate_page(basepath, os.path.join(from_path, item), template_path, dest_path)
         elif os.path.isdir(os.path.join(from_path, item)):
-            generate_page_recursive(os.path.join(from_path, item), template_path, os.path.join(dest_path, item))
+            generate_page_recursive(basepath, os.path.join(from_path, item), template_path, os.path.join(dest_path, item))
 
-def generate_page(from_path, template_path, dest_path):
+def generate_page(basepath, from_path, template_path, dest_path):
     print(f"Generating page from {from_path} to {dest_path} using {template_path}")
     with open(from_path, "r") as f:
         source_content = f.read()
@@ -38,6 +38,8 @@ def generate_page(from_path, template_path, dest_path):
     title = extract_title(from_path)
     template_content = template_content.replace("{{ Title }}", title)
     template_content = template_content.replace("{{ Content }}", html)
+    template_content = template_content.replace('href="/', f'href="{basepath}')
+    template_content = template_content.replace('src="/', f'src="{basepath}')
     if not os.path.exists(dest_path):
         os.makedirs(dest_path, exist_ok = True)
     file_name = "".join(from_path.split('/')[-1:])
