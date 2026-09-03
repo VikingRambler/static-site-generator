@@ -6,8 +6,9 @@ Static Site Generator based on "Build a Static Site Generator" course from Boot.
 
 ## Usage:
 
-Call the generator with `./main.sh`
+Build the structure and html files with `./build.sh`. Basepath can be specified with the flag `basepath`, otherwise defaults to "/"
+Content stored in the `content` folder will be used, along with the template sitting in the root directory. Files will be built and copied to `docs`
 
 ### Notes:
 
-Only basic implementation at this time. Further features / refinements in development.
+Works best with clearly formatted Markdown files. Files must start with a "h1" heading, i.e. `#`
