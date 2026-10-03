@@ -5,13 +5,13 @@ Welcome! I call myself the Cyber Viking which, if you knew me, would be for fair
 This page is intended to be an intro to my misadventures in `coding` and cyber-security.
 With any luck, more projects will appear here as I continue to progress and, _hopefully_, they'll get better.
 
-## Current Public Repos:
+## Current Public Repos
 
 1. [Asteroids](https://github.com/VikingRambler/Asteroids)
 2. [Static Site Generator](https://github.com/VikingRambler/static-site-generator)
 3. [Web Scraper](https://github.com/VikingRambler/web-scraper)
 
-## Current Languages:
+## Current Languages
 
 1. Python
 2. JavaScript
