@@ -47,12 +47,12 @@ h6 {
 a {
   color: #226d57;
   text-decoration: none;
-  border-bottom: 2px solid #e0a96d;
+  border-bottom: 2px solid #226d57;
 }
 
 a:hover {
   color: #1d5e4a;
-  border-color: #f4a261;
+  border-color: #1d5e4a;
 }
 
 ul,
