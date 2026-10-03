@@ -1,7 +1,7 @@
 body {
   background-color: #1f1c25;
   color: #f0e6d1;
-  font-family: "Luminari", "Georgia", serif;
+  font-family: "Space Grotesk", "Inter", serif;
   line-height: 1.7;
   margin: 0;
   padding: 20px;
@@ -20,7 +20,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #dda15e;
+  color: #184e3e;
   margin-top: 24px;
   margin-bottom: 16px;
   text-shadow: 2px 2px 4px #000;
@@ -45,13 +45,13 @@ h6 {
 }
 
 a {
-  color: #e0a96d;
+  color: #226d57;
   text-decoration: none;
   border-bottom: 2px solid #e0a96d;
 }
 
 a:hover {
-  color: #f4a261;
+  color: #1d5e4a;
   border-color: #f4a261;
 }
 
