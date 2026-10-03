@@ -1,46 +1,18 @@
+# GitHub Home of the Cyber Viking
 
-# Tolkien Fan Club
+Welcome! I call myself the Cyber Viking which, if you knew me, would be for fairly obvious reasons.
 
-![JRR Tolkien sitting](/images/tolkien.png)
+This page is intended to be an intro to my misadventures in `coding` and cyber-security.
+With any luck, more projects will appear here as I continue to progress and, _hopefully_, they'll get better.
 
-Here's the deal, **I like Tolkien**.
+## Current Public Repos:
+1. [Asteroids](https://github.com/VikingRambler/Asteroids)
+2. [Static Site Generator](https://github.com/VikingRambler/static-site-generator)
+3. [Web Scraper](https://github.com/VikingRambler/web-scraper)
 
-> "I am in fact a Hobbit in all but size."
->
-> -- J.R.R. Tolkien
-
-## Blog posts
-
-- [Why Glorfindel is More Impressive than Legolas](/blog/glorfindel)
-- [Why Tom Bombadil Was a Mistake](/blog/tom)
-- [The Unparalleled Majesty of "The Lord of the Rings"](/blog/majesty)
-
-## Reasons I like Tolkien
-
-- You can spend years studying the legendarium and still not understand its depths
-- It can be enjoyed by children and adults alike
-- Disney _didn't ruin it_ (okay, but Amazon might have)
-- It created an entirely new genre of fantasy
-
-## My favorite characters (in order)
-
-1. Gandalf
-2. Bilbo
-3. Sam
-4. Glorfindel
-5. Galadriel
-6. Elrond
-7. Thorin
-8. Sauron
-9. Aragorn
-
-Here's what `elflang` looks like (the perfect coding language):
-
-```
-func main(){
-    fmt.Println("Aiya, Ambar!")
-}
-```
+## Current Languages:
+1. Python
+2. JavaScript
 
 Want to get in touch? [Contact me here](/contact).
 

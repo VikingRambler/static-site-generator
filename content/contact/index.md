@@ -1,9 +1,5 @@
-# Contact the Author
+# Contact Me 
 
 [< Back Home](/)
 
-Give me a call anytime to chat about Tolkien!
-
-`555-555-5555`
-
-**"Váya márië."**
+`More information and contact details can be found on my site [DCCyber](https://dccyber.co.uk/)`
